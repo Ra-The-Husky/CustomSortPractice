@@ -11,9 +11,18 @@ function ageSort(users) {
 }
 
 function oddEvenSort(arr) {
-  // Your code here
+  return arr.sort((a, b) => {
+    if(a % 2 !== 0 && b % 2 === 0){
+      return -1
+    }
+    if(a % 2 === 0 && b % 2 !== 0){
+      return 1;
+    }
+    return a - b;
+  })
 }
-
+const arr1 = [5, 4, 7, 2, 9, 8, 1, 6, 3];
+console.log(oddEvenSort(arr1))
 function validAnagrams(s, t) {
   // Your code here
 }
